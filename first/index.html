@@ -49,43 +49,43 @@
 <script src="../../common/js/jquery.js"></script>
 <script>
 $(function() {
-  // 第1問  id='q1'の要素の文字色を赤色にせよ。
-  $('#q1').css('color','red');
-  // 第2問  id='q2'の要素をクリックしたら背景色をピンクにせよ。
-  $('#q2').click(function() {
-    $(this).css('background-color','pink');
-  });
-  // 第3問  id='q3'の要素をクリックしたらこの要素の前後とこの要素内の前後にテキストを挿入せよ。
-  $('#q3').click(function() {
-    $(this).prepend('この要素内の前')
-           .append('この要素内の後')
-           .before('この要素の前')
-           .after('この要素の後');
-  })
-  // 第4問  id='q4'の要素をクリックしたらこの要素にlargeというクラスを付与せよ。
-  $('#q4').click(function() {
-    $(this).addClass('large');
-  })
-  // 第5問  id='q5'の要素をクリックしたらこの要素を2秒かけてmargin-topとmargin-leftを100pxの位置に移動させよ。
-  $('#q5').click(function (){
-    $(this).animate({
-      'marginTop' : '100px',
-      'marginLeft' : '100px'
-    },2000);
-  });
-  // 第6問  id='q6'の子要素をクリックしたら、その要素のインデックス（何番目か）をconsole.log()とalert()を用いて表示させよ。
-  $('#q6').find('li').click(function() {
-    var targetNum = $(this).index();
-    console.log(targetNum);
-    alert(targetNum);
-  })
-  // 第7問  id='q7'の要素をクリックしたらこの要素に設定してあるdata属性をconsoleに表示せよ。
-  $('#q7').click(function () {
-      var text = $(this).data('text');
-      console.log(text);
-  });
-  
-  });
+// 第1問  id='q1'の要素の文字色を赤色にせよ。
+$('#q1').css('color','red');
+// 第2問  id='q2'の要素をクリックしたら背景色をピンクにせよ。
+$('#q2').click(function() {
+  $(this).css('background-color','pink');
+});
+// 第3問  id='q3'の要素をクリックしたらこの要素の前後とこの要素内の前後にテキストを挿入せよ。
+$('#q3').click(function() {
+  $(this).prepend('この要素内の前')
+         .append('この要素内の後')
+         .before('この要素の前')
+         .after('この要素の後');
+})
+// 第4問  id='q4'の要素をクリックしたらこの要素にlargeというクラスを付与せよ。
+$('#q4').click(function() {
+  $(this).addClass('large');
+})
+// 第5問  id='q5'の要素をクリックしたらこの要素を2秒かけてmargin-topとmargin-leftを100pxの位置に移動させよ。
+$('#q5').click(function (){
+  $(this).animate({
+    'marginTop' : '100px',
+    'marginLeft' : '100px'
+  },2000);
+});
+// 第6問  id='q6'の子要素をクリックしたら、その要素のインデックス（何番目か）をconsole.log()とalert()を用いて表示させよ。
+$('#q6').find('li').click(function() {
+  var targetNum = $(this).index();
+  console.log(targetNum);
+  alert(targetNum);
+})
+// 第7問  id='q7'の要素をクリックしたらこの要素に設定してあるdata属性をconsoleに表示せよ。
+$('#q7').click(function () {
+    var text = $(this).data('text');
+    console.log(text);
+});
+
+});
 </script>
 </body>
 </html>

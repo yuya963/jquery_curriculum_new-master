@@ -30,6 +30,18 @@
       // .eq() 引数に応じたindexの要素を指定します。
       // .addClass() クラスを追加します。
       // .removeClass() クラスを削除します。
+      $(function() {
+        $('.nav li').click(function() { 
+          let num = $(this).index();
+          $('.contents li').addClass('is-hidden');
+          $('.contents li').eq(num).removeClass('is-hidden');
+        });
+      });
+//クラス名contentsの子要素であるliを一旦非表示にさせる為にaddClassでis-hiddenクラスを追加します。
+//最後にクラス名.navでクリック時に取得したインデックス番号でcontentsクラスの同じインでクックス番号のliのis-hiddenを削除します。
+//これで選択したタブに紐ずく内容だけ表示させます。
+
     </script>
   </body>
 </html>
+
